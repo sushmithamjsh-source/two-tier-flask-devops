@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Two-Tier Flask App</title>
+</head>
+<body>
+  <h1>Messages</h1>
+  <form method="POST">
+    <input type="text" name="message" placeholder="Type a message" required>
+    <button type="submit">Send</button>
+  </form>
+  <ul>
+    {% for m in messages %}
+      <li>{{ m }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
